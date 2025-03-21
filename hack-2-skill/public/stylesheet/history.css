@@ -1,0 +1,13 @@
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-div {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}

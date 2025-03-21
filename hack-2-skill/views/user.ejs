@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main_page.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="/stylesheet/user.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid my-4">
+        <button class="btn btn-outline-light menu-button btn-secondary" id="menu-toggle">☰</button>
+    </div>
+  </nav>
+
+<div class="sidebar" id="sidebar">
+    <a href="/workconnect/history/<%= user1.username %>" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Post job history</a>
+    <br>
+    <a href="/workconnect/delete-account/<%= user1.username%>" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Delete Account</a>
+</div>
+    <section class="row">
+        <div class="col-xxl-4 d-flex flex-column border border-5">  
+            <div class="container ">
+                    <h6 class="py-3 text-center fs-3">Personal Details</h6>
+                </div>
+                <div class="container py-4 d-flex d-row justify-content-start align-items-center border border-1 border-dark rounded-top">
+                    <h6 class="text-secondary col-5">Full Name:</h6>
+                    <h6 class="col-8"><%=user1.firstname%> <%=user1.lastname%></h6>
+                </div>
+                <div class="container py-4  d-flex d-row justify-content-start align-items-center border border-1 border-dark">
+                    <h6 class="text-secondary col-5">Date of Birth:</h6>
+                    <h6 class="col-8"><%=user1.dob%></h6>
+                </div>
+                <div class="container py-4  d-flex d-row justify-content-start align-items-center border border-1 border-dark">
+                    <h6 class="text-secondary col-5">Gender:</h6>
+                    <h6 class="col-8"><%=user1.gender%></h6>
+                </div>
+                <div class="container py-4  d-flex d-row justify-content-start align-items-center border border-1 border-dark">
+                    <h6 class="text-secondary col-5">Address</h6>
+                    <h6 class="col-8"><%=user1.state%>,<%=user1.district%></h6>
+                </div>
+                <div class="container py-4  d-flex d-row justify-content-start align-items-center border border-1 border-dark rounded-bottom mb-5">
+                    <h6 class="text-secondary col-5">Phone Number:</h6>
+                    <h6 class="col-8"><%=user1.mobile%></h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-8">
+            <div class="container row">
+                <div class="mt-5 col-xxl-4  d-flex flex-row align-items-center justify-content-center">
+                    <a href="/workconnect/post-job">
+                    <button style="--content: 'Post a Job';" id="btn_job">
+                        <div class="left"></div>Post a Job<div class="right"></div>
+                    </button>
+                    </a>
+                </div>
+                <div class="mt-5 col-xxl-4  d-flex flex-row align-items-center justify-content-center">
+                    <a href="/workconnect/chatbot">
+                        <button id="btn_job">
+                    <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                        <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"></path>
+                    </svg>
+                        <div class="left"></div>chatbot<div class="right"></div>
+                    </button>
+                </a>
+                </div>
+                <div class="mt-5 col-xxl-4  d-flex flex-row align-items-center justify-content-center">
+                    <a href="/workconnect/view-jobs">
+                        <button style="--content: 'Get a Job';" id="btn_job">
+                            <div class="left"></div>Get a Job<div class="right"></div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <section class="container py-5">
+                <div class="carousel slide" id="carouselDemo">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  </div>          
+                    <div class="carousel-inner rounded-5" id="reviews_inner">
+                      <h1 class="py-4 text-center text-white" style="font-weight: 800;">Your Reviews</h1>
+                          <div class="carousel-item active text-center pb-5">
+                              <img src="person6.png" class=" rounded-circle" alt="..." height="75px" >
+                              <p class="text-white">Joohnthan Doe</p>
+                              <h5 class="text-secondary">"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind  texts."</h5>
+                              
+                          </div>
+                          <div class="carousel-item text-center pb-5">
+                            <img src="person5.png" class=" rounded-circle" alt="..." height="75px" >
+                            <p class="text-white">Emily Shire</p>
+                            <h5 class="text-secondary">"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind  texts."</h5>
+                            
+                          </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>    
+            </section>
+            <section class="rounded-5" id="your_rating">
+                <div class="d-flex flex-column">
+                    <h1 class="py-4 text-center text-white" style="font-weight: 800;">Your Rating</h1>
+                    
+                    <div class="stars d-flex flex-row justify-content-evenly px-5 mx-5 mb-5">
+                        <i class="fa-solid fa-star" id="star-1"></i>
+                        <i class="fa-solid fa-star" id="star-2"></i>
+                        <i class="fa-solid fa-star" id="star-3"></i>
+                        <i class="fa-regular fa-star" id="star-4"></i>
+                        <i class="fa-regular fa-star" id="star-5"></i>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script defer src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@5.10.0/dist/js/coreui.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/javascript/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+      .card-container {
+          perspective: 1000px;
+      }
+
+      .card {
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+        position: relative; /* Ensure child elements position correctly */
+    }
+
+      .card.is-flipped {
+          transform: rotateY(180deg);
+      }
+
+      .card-front {
+          background-color: #f0f0f0;
+          padding: 20px;
+      }
+
+      .card-back {
+          background-color:gray;
+          color: white;
+          transform: rotateY(180deg);
+          padding: 20px;
+      }
+    
+    .card-side {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    
+    .button {
+        position: absolute;
+        bottom: 10px;  /* Adjust this value to fine-tune placement */
+        right: 10px;   /* Adjust this value to fine-tune placement */
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        transition: 0.3s;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
